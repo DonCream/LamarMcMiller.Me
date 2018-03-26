@@ -8,7 +8,7 @@
 
 <div class="container" id="content">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-10">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

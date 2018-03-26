@@ -43,8 +43,8 @@ gulp.task('fonts', ['fa'], function(){
 
 // Move Font Awesome CSS to dist/css
 gulp.task('fa', function(){
-  return gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
-    .pipe(gulp.dest("./dist/css"));
+  return gulp.src('node_modules/font-awesome/css/font-awesome.css')
+    .pipe(gulp.dest("./fonts"));
 });
 
 // Move Waypoints to ./src/js folder

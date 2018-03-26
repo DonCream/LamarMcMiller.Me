@@ -335,12 +335,15 @@ span.slash {
   }
 }
 
-.icons li a {
+.icons li .fa {
+  color: #fff;
   font-size: 35px;
   margin: 0 15px; }
 
-.icons li .fa {
-  color: #fff; }
+.footer-icons li .fa {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;}
 
 .icons li:hover .fa-facebook {
   color: #3b5998;
@@ -385,6 +388,10 @@ span.slash {
   h3 {
     color: $wtblue;
   }
+}
+container-fluid{
+width: 90%;
+background-color: $wtblue;
 }
 
 section > .container-fluid{
@@ -473,14 +480,32 @@ footer > .container-fluid {
     background-color: $wtblue
 }
 
-.recent {
+#recent-posts-5 {
+  font-size: 20px;
+}
+
+#recent-posts-5 > ul {
+   padding: 0;
+   margin: 0;
+}
+
+#categories-5 {
+  font-size: 15px;
+}
+
+#categories-5 > ul {
+   padding: 0;
+   margin: 0;
+}
+
+#archives-5 {
   background-color: $brown;
 }
 
-.archive {
-  background-color: $off-black;
+#archives-6 ul {
+   padding: 0;
+   margin: 0;
 }
-
 .hexagon {
    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

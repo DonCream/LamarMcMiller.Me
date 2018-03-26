@@ -13,7 +13,7 @@ get_header();
 	<div class="row h-100 justify-content-center align-items-center">
 		<div class="col-md-6">
 			<h1 id="about" class="display-1 text-center">About</h1>
-			<p id="about-heading-text" class="text-center m-3">Who Am I? <br> Where Did I Come From? <br> Why Am I Here?</p>
+			<p id="about-heading-text" class="text-center m-3"><?php the_field('about_description'); ?></p>
 			<p class="text-center m-3"><small>well..It is my website, soo....</small></p>
 
 		</div>
@@ -23,7 +23,7 @@ get_header();
 <div class="container box-2">
 	<div class="row">
 		<div class="col-md-12">
-			<p class="m-5 px-3">I am a web developer working out of Detroit, with a focus on utilizing open source technologies. I’ve found that developing and open source skill set has decreased the barrier to entry in the web design/development space for creators and
+			<p class="m-5 px-3">I am a web developer working out of Detroit, with a focus on utilizing open source technologies. Ive found that developing and open source skill set has decreased the barrier to entry in the web design/development space for creators and
 				clients by lowering the cost of creating and maintaining wonderful web experiences.</p>
 
 			<h3 class="m-5">Career</h3>
@@ -76,7 +76,7 @@ get_header();
 	<div class="row h-100 justify-content-center align-items-center">
 		<div class="col-md-6">
 			<h1 id="work" class="display-1 text-center">Work</h1>
-			<p id="work-heading-text" class="m-3">Samples from my work around the web.</p>
+			<p id="work-heading-text" class="m-3"><p><?php the_field('work_description'); ?></p></p>
 		</div>
 	</div>
 </div>
@@ -138,7 +138,7 @@ get_header();
 	<div class="row h-100 justify-content-center align-items-center">
 		<div class="col-md-6">
 			<h1 id="blog" class="display-1 text-center">Blog</h1>
-			<p id="blog-heading-text" class="m-3">All my latest musings on all things web design and open source.</p>
+			<p id="blog-heading-text" class="m-3"><p><?php the_field('blog_description'); ?></p></p>
 		</div>
 	</div>
 </div>
@@ -149,65 +149,23 @@ get_header();
 		<div class="row">
 			<div class="col-sm-12 ">
 
-				<div class="card mb-2 post-desc">
-					<?php if(have_posts()) : ?>
-						<?php while(have_posts()) : the_post(); ?>
-					<article class="post"><span class="tab-2"><?php the_date(); ?> by <?php the_author(); ?></span>
-					<h1 class="card-heading tab-2"><?php the_title(); ?></h1>
-					<p class="card-body"><?php the_content(); ?></p>
-					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article>
-				<?php endwhile; ?>
-				<?php else : ?>
-				<?php endif; ?>
-				</div>
+				<?php
+				    $args = array( 'numberposts' => '5' );
+				    $recent_posts = wp_get_recent_posts( $args );
+				    $i = 0;
+				    foreach($recent_posts as $recent) {
 
-				<div class="card mb-2 post-desc">
-					<?php if(have_posts()) : ?>
-						<?php while(have_posts()) : the_post(); ?>
-					<article class="post"><span class="tab-2"><?php the_date(); ?> by <?php the_author(); ?></span>
-					<h1 class="card-heading tab-2"><?php the_title(); ?></h1>
-					<p class="card-body"><?php the_content(); ?></p>
-					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article>
-				<?php endwhile; ?>
-				<?php else : ?>
-				<?php endif; ?>
-				</div>
+				        echo '<div class="card mb-2 post-desc"><article class="post"><span class="tab-2"><?php the_date(); ?> by <?php the_author(); ?></span>
+	  					<h1 class="card-heading tab-2"> . $recent["post_title"] .</h1>
+	  					<p class="card-body"><?php the_content(); ?></p>
+	  					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article></div> ';
 
-				<div class="card mb-2 post-desc">
-					<?php if(have_posts()) : ?>
-						<?php while(have_posts()) : the_post(); ?>
-					<article class="post"><span class="tab-2"><?php the_date(); ?> by <?php the_author(); ?></span>
-					<h1 class="card-heading tab-2"><?php the_title(); ?></h1>
-					<p class="card-body"><?php the_content(); ?></p>
-					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article>
-				<?php endwhile; ?>
-				<?php else : ?>
-				<?php endif; ?>
-				</div>
+				    $i++;
+				    }
 
-				<div class="card mb-2 post-desc">
-					<?php if(have_posts()) : ?>
-						<?php while(have_posts()) : the_post(); ?>
-					<article class="post"><span class="tab-2"><?php the_date(); ?></span>
-					<h1 class="card-heading tab-2"><?php the_title(); ?></h1>
-					<p class="card-body"><?php the_content(); ?></p>
-					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article>
-				<?php endwhile; ?>
-				<?php else : ?>
-				<?php endif; ?>
-				</div>
+				    wp_reset_query();
+				?>
 
-				<div class="card mb-2 post-desc">
-					<?php if(have_posts()) : ?>
-						<?php while(have_posts()) : the_post(); ?>
-					<article class="post"><span class="tab-2"><?php the_date(); ?></span>
-					<h1 class="card-heading tab-2"><?php the_title(); ?></h1>
-					<p class="card-body"><?php the_content(); ?></p>
-					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article>
-				<?php endwhile; ?>
-				<?php else : ?>
-				<?php endif; ?>
-				</div>
 
 				<a id="blog-link" class=" m-3" href="blog.html">View Full Blog...</a>
 			</div>
@@ -220,7 +178,7 @@ get_header();
 	<div class="row h-100 justify-content-center align-items-center">
 		<div class="col-md-6">
 			<h1 id="contact" class="display-1 text-center">Contact</h1>
-			<p id="contact-heading-text" class="m-3">Connect with me via Email and Social Media.</p>
+			<p id="contact-heading-text" class="m-3"><p><?php the_field('contact_description'); ?></p></p>
 		</div>
 	</div>
 </div>
@@ -229,11 +187,11 @@ get_header();
 	<div class="row h-100 justify-content-center align-items-center">
 		<div class="col-md-6">
 			<h1 class="pt-3 ">Work with Me</h1>
-			<p class="">I am available for independent or collaborative freelance work, as well as full time employment.</p>
+			<p class=""><p><?php the_field('contact_lead'); ?></p>
 			<h3 class="">Phone</h3>
-			<p class="">313.744.3645</p>
+			<p class=""><p><?php the_field('contact_number'); ?></p>
 			<h3 class="">Email</h3>
-			<p class="">lamar.mcmiller@gmail.com <br> webjelly313@gmail.com</p>
+			<p class=""><p><?php the_field('contact_email'); ?></p>
 			<div class="">
 				<a class="btn btn-sm custom-btn text-white" data-toggle="modal" data-target="#contactModal">Contact Me</a>
 			</div>
@@ -273,7 +231,7 @@ get_header();
 			<div class="col-md-8">
 				<ul class="icons list-inline">
 					<li class="list-inline-item">
-						<a href="facebook.com/doncream"><i class="fa fa-facebook"></i></a>
+						<p><?php the_field('fa_1'); ?></a>
 					</li>
 					<li class="list-inline-item">
 						<a href="https://twitter.com/DonCream"><i class="fa fa-twitter"></i></a>

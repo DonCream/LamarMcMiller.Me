@@ -2,8 +2,6 @@
 /**
  * LamarMcMiller.Me functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package LamarMcMiller.Me
  */
 
@@ -113,28 +111,28 @@ add_action( 'after_setup_theme', 'lm_content_width', 0 );
 
 function lm_scripts() {
 
-   wp_enqueue_style('lm-bs-css', get_template_directory_uri() . '/dist/css/bootstrap.min.css');
+   wp_enqueue_style('bootstrap', get_template_directory_uri() . '/dist/css/bootstrap.css');
 
-	wp_enqueue_style( 'lm-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
 
-   wp_enqueue_style('lm-fa-css', get_template_directory_uri() . '/dist/css/font-awesome.min.css');
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
    wp_register_script('popper', '/src/js/popper.min.js'. false, '', true);
 
-   wp_enqueue_script('lm-jquery',
+   wp_enqueue_script('jquery',
 	get_template_directory_uri() .'/src/js/jquery.min.js',
 	array(), '20180315', true);
 
-	wp_enqueue_script('lm-bootstrap', get_template_directory_uri().
+	wp_enqueue_script('bootstrapjs', get_template_directory_uri().
 	'/src/js/bootstrap.min.js', array('jquery'), '20180315', true);
 
-	wp_enqueue_script('lm-bootstrap-hover', get_template_directory_uri() .
+	wp_enqueue_script('bootstrap-hover', get_template_directory_uri() .
 	'/src/js/bootstrap-hover.js', array('jquery'), '20180315', true);
 
-	wp_enqueue_script('lm-nav-scroll', get_template_directory_uri() .
+	wp_enqueue_script('nav-scroll', get_template_directory_uri() .
 	'/src/js/nav-scroll.js', array('jquery'), '20180315', true);
 
-	wp_enqueue_script( 'lm-skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'gulp-wordpress-javascript', get_template_directory_uri() . '/dist/js/app.min.js', array(), '20180316', true );
 
@@ -191,3 +189,10 @@ function change_logo_class($html)
 }
 //  Remove Wordpress Admin bar
  show_admin_bar(true);
+
+// add icon class to font-awesome icons
+function change_fa_class($faicons)
+{
+	$faicons = str_replace('fa', 'icons', $faicons);
+	return $faicons;
+}

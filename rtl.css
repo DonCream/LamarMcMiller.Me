@@ -952,13 +952,16 @@ span.slash {
   font-family: "Didact Gothic", sans-serif;
 }
 
-.icons li a {
+.icons li .fa {
+  color: #fff;
   font-size: 35px;
   margin: 0 15px;
 }
 
-.icons li .fa {
+.footer-icons li .fa {
   color: #fff;
+  font-size: 20px;
+  margin: 0 15px;
 }
 
 .icons li:hover .fa-facebook {
@@ -1014,6 +1017,11 @@ span.slash {
 
 .main-footer h3 {
   color: #dbe8f1;
+}
+
+container-fluid {
+  width: 90%;
+  background-color: #dbe8f1;
 }
 
 section > .container-fluid {
@@ -1076,12 +1084,31 @@ footer > .container-fluid {
   background-color: #dbe8f1;
 }
 
-.recent {
+#recent-posts-5 {
+  font-size: 20px;
+}
+
+#recent-posts-5 > ul {
+  padding: 0;
+  margin: 0;
+}
+
+#categories-5 {
+  font-size: 15px;
+}
+
+#categories-5 > ul {
+  padding: 0;
+  margin: 0;
+}
+
+#archives-5 {
   background-color: #a47a51;
 }
 
-.archive {
-  background-color: #333;
+#archives-6 ul {
+  padding: 0;
+  margin: 0;
 }
 
 .hexagon {
