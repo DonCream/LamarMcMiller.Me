@@ -135,6 +135,12 @@ function lm_scripts() {
 	wp_enqueue_script('navbar-fixed', get_template_directory_uri() .
 	'/src/js/navbar-fixed.js', array('jquery'), '20180326', true);
 
+	wp_enqueue_script('navbar-fixed', get_template_directory_uri() .
+	'/src/js/waypoints.js', array('jquery'), '20180326', true);
+
+	wp_enqueue_script('navbar-fixed', get_template_directory_uri() .
+	'/src/js/main.js', array('jquery'), '20180326', true);
+
 	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'gulp-wordpress-javascript', get_template_directory_uri() . '/dist/js/app.min.js', array(), '20180316', true );

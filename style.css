@@ -1086,6 +1086,8 @@ footer > .container-fluid {
 
 #recent-posts-5 {
   font-size: 20px;
+  font-family: "Didact Gothic", sans-serif;
+  color: #dbe8f1;
 }
 
 #recent-posts-5 > ul {
@@ -1095,6 +1097,8 @@ footer > .container-fluid {
 
 #categories-5 {
   font-size: 15px;
+  font-family: "Didact Gothic", sans-serif;
+  color: #dbe8f1;
 }
 
 #categories-5 > ul {
@@ -1102,13 +1106,9 @@ footer > .container-fluid {
   margin: 0;
 }
 
-#archives-5 {
-  background-color: #a47a51;
-}
-
-#archives-6 ul {
-  padding: 0;
-  margin: 0;
+#archives-6 {
+  font-family: "Didact Gothic", sans-serif;
+  color: #dbe8f1;
 }
 
 .hexagon {

@@ -488,6 +488,8 @@ footer > .container-fluid {
 
 #recent-posts-5 {
   font-size: 20px;
+  font-family: $content-heading;
+  color: $wtblue
 }
 
 #recent-posts-5 > ul {
@@ -497,6 +499,8 @@ footer > .container-fluid {
 
 #categories-5 {
   font-size: 15px;
+  font-family: $content-heading;
+  color: $wtblue;
 }
 
 #categories-5 > ul {
@@ -504,13 +508,9 @@ footer > .container-fluid {
    margin: 0;
 }
 
-#archives-5 {
-  background-color: $brown;
-}
-
-#archives-6 ul {
-   padding: 0;
-   margin: 0;
+#archives-6 {
+   font-family: $content-heading;
+   color: $wtblue;
 }
 .hexagon {
    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
