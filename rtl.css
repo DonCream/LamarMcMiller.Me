@@ -678,7 +678,7 @@ object {
 
 body {
   margin: 0;
-  padding-top: 0;
+  padding-top: 85px;
 }
 
 body p {
@@ -760,7 +760,7 @@ nav ul li a:hover:before {
 
 a.nav-link {
   padding-bottom: 0;
-  padding-top: 0;
+  padding-top: 15px;
 }
 
 span.slash {
@@ -964,7 +964,7 @@ span.slash {
   margin: 0 15px;
 }
 
-.icons li:hover .fa-facebook {
+.icons li:hover .fa-facebook-official {
   color: #3b5998;
   text-shadow: 0 0 15px #3b5998;
 }
@@ -1130,6 +1130,12 @@ footer > .container-fluid {
   .slash,
   .sidebar {
     display: none;
+  }
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
   }
 }
 

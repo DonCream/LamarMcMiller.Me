@@ -119,13 +119,13 @@ get_header();
 				<div class="col-xs-6">
 					<ul class="icons">
 						<li class="list-inline-item">
-							<a href="github.com/doncream"><i class="fa fa-github"></i></a>
+							<a href="https://github.com/DonCream"><i class="fa fa-github"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href="codepen.io/doncream"><i class="fa fa-codepen"></i></a>
+							<a href="https://codepen.io/DonCream/#"><i class="fa fa-codepen"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href="dribbble.com/doncream"><i class="fa fa-dribbble"></i></a>
+							<a href="https://dribbble.com/DonCreamy"><i class="fa fa-dribbble"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -205,24 +205,9 @@ get_header();
 						<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
 					</div>
 					<div class="modal-body">
-						<form class="text-dark">
-							<div class="form-group">
-								<label for="name">Name</label>
-								<input type="text" class="form-control">
-							</div>
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="text" class="form-control">
-							</div>
-							<div class="form-group">
-								<label for="name">Message</label>
-								<textarea class="form-control" name="message" rows="5"></textarea>
-							</div>
-						</form>
+					<?php echo do_shortcode('[contact-form-7 id="1778" title="Contact form 1"]'); ?>
 					</div>
-					<div class="modal-footer">
-						<a class="btn btn-sm custom-btn text-white">Submit</a>
-					</div>
+
 				</div>
 			</div>
 		</div>
@@ -231,7 +216,7 @@ get_header();
 			<div class="col-md-8">
 				<ul class="icons list-inline">
 					<li class="list-inline-item">
-						<p><?php the_field('fa_1'); ?></a>
+						<a href="https://facebook.com/DonCream"><i class="fa fa-facebook-official"></i></a>
 					</li>
 					<li class="list-inline-item">
 						<a href="https://twitter.com/DonCream"><i class="fa fa-twitter"></i></a>
@@ -240,13 +225,13 @@ get_header();
 						<a href="https://instagram.com/Doncream"><i class="fa fa-instagram"></i></a>
 					</li>
 					<li class="list-inline-item">
-						<a href="https://instagram.com/Doncream"><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.linkedin.com/in/lamarmcmiller/"><i class="fa fa-linkedin"></i></a>
 					</li>
 					<li class="list-inline-item">
-						<a href="https://instagram.com/Doncream"><i class="fa fa-youtube"></i></a>
+						<a href="https://www.youtube.com/channel/UCKCFNa4SRuAY2StW7eyUWaA?view_as=subscriber"><i class="fa fa-youtube"></i></a>
 					</li>
 					<li class="list-inline-item">
-						<a href="https://instagram.com/Doncream"><i class="fa fa-pinterest"></i></a>
+						<a href="https://www.pinterest.com/doncream/"><i class="fa fa-pinterest"></i></a>
 					</li>
 				</ul>
 			</div>

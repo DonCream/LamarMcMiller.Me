@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 
 	<header id="masthead" class="site-header">
-     <nav id="menu" class="navbar navbar-expand-xl navbar-dark fixed-top" role="navigation">
+     <nav id="bs4navbar" class="navbar navbar-expand-xl navbar-dark fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="site-branding navbar-header">
 				<?php
@@ -47,8 +47,7 @@
 					<p class="site-description"><?php echo $lm_description; /* WPCS: xss ok. */ ?></p>
 				<?php endif; ?>
 		</div><!-- .site-branding -->
-		<button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#navbarNav" aria-controls="
-		navbarNav" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span>
+		<button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#navbarNav" aria-controls="bs4navbar" aria-expanded="true" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span>
 			</button>
 
 			<?php
@@ -56,15 +55,16 @@
 				'menu' => 'primary',
 				'theme_location' => 'primary',
 				'container' => 'div',
-				'container_id' => 'bs4navbar',
-				'container_class' => 'collapse navbar-collapse',
-				'menu_id' => 'menu',
+				'container_id' => 'navbarNav',
+				'container_class' => 'collapse navbar-collapse ',
+				'menu_id' => 'bs4navbar',
 				'menu_class' => 'navbar-nav mx-auto',
 				'depth' => 2,
 				'fallback_cb' => 'bs4navwalker: :fallback',
 				'walker' => new bs4navwalker()
 			]);
 			?>
+				</div>
 			</nav>
 	</header><!-- #masthead -->
 

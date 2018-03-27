@@ -20,7 +20,7 @@ if ( ! function_exists( 'lm_setup' ) ) :
 		 * If you're building a theme based on LamarMcMiller.Me, use a find and replace
 		 * to change 'lm' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'lm', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'lamarmcmiller.me', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -132,6 +132,9 @@ function lm_scripts() {
 	wp_enqueue_script('nav-scroll', get_template_directory_uri() .
 	'/src/js/nav-scroll.js', array('jquery'), '20180315', true);
 
+	wp_enqueue_script('navbar-fixed', get_template_directory_uri() .
+	'/src/js/navbar-fixed.js', array('jquery'), '20180326', true);
+
 	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'gulp-wordpress-javascript', get_template_directory_uri() . '/dist/js/app.min.js', array(), '20180316', true );
@@ -188,11 +191,6 @@ function change_logo_class($html)
 	return $html;
 }
 //  Remove Wordpress Admin bar
- show_admin_bar(true);
+ show_admin_bar(false);
 
 // add icon class to font-awesome icons
-function change_fa_class($faicons)
-{
-	$faicons = str_replace('fa', 'icons', $faicons);
-	return $faicons;
-}

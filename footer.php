@@ -22,7 +22,7 @@
 		  <div class="">
 			  <ul class="icons footer-icons">
 				<li class="list-inline-item">
-					<a href="facebook.com/doncream"><i class="fa fa-facebook"></i></a>
+					<a href="facebook.com/doncream"><i class="fa fa-facebook-official"></i></a>
 				</li>
 				<li class="list-inline-item">
 					<a href="https://twitter.com/DonCream"><i class="fa fa-twitter"></i></a>

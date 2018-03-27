@@ -193,7 +193,7 @@ class bs4Navwalker extends Walker_Nav_Menu
      */
     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
         if ($depth === 0) {
-            $output .= "</li>\n";
+            $output .= "</li>\n<span class='slash'>&#47;</span>";
         }
     }
 }
