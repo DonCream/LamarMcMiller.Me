@@ -35,8 +35,6 @@ if ( ! function_exists( 'lm_setup' ) ) :
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
 
@@ -69,8 +67,6 @@ if ( ! function_exists( 'lm_setup' ) ) :
 
 		/**
 		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
 			'height'      => 60,
@@ -97,13 +93,9 @@ add_action( 'after_setup_theme', 'lm_setup' );
  */
 function lm_content_width() {
 	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'lm_content_width', 1120 );
 }
 add_action( 'after_setup_theme', 'lm_content_width', 0 );
-
-
 
 /**
  * Enqueue scripts and styles.
@@ -116,8 +108,6 @@ function lm_scripts() {
    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/dist/css/bootstrap.css');
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
-
-
 
    wp_register_script('popper', '/src/js/popper.min.js'. false, '', true);
 
@@ -153,6 +143,19 @@ function lm_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'lm_scripts' );
+
+
+ // Add excerpt support for pages
+ function my_add_excerpts_to_pages() {
+      add_post_type_support('page', 'excerpt');
+ }
+ add_action('init', 'my_add_excerpts_to_pages');
+
+// Add excerpt support for posts
+ function my_add_excerpts_to_posts() {
+      add_post_type_support('post', 'excerpt');
+ }
+ add_action('init', 'my_add_excerpts_to_posts');
 
 /**
  * Implement the Custom Header feature.
@@ -200,8 +203,3 @@ function change_logo_class($html)
 }
 //  Remove Wordpress Admin bar
  show_admin_bar(false);
-
- function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more' );

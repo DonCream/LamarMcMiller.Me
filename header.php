@@ -20,6 +20,10 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>./dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>./dist/css/font-awesome.min.css">
+   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>./dist/css/ekko-lightbox.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
    <link href="https://fonts.googleapis.com/css?family=Abel|Comfortaa|Cormorant+Garamond|Dancing+Script|Didact+Gothic|Poiret+One|Satisfy" rel="stylesheet">
 </head>

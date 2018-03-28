@@ -9,9 +9,10 @@
 <footer id="colophon" class="main-footer">
 	<div class="container-fluid">
 	 <div class="row justify-content-between align-items-center">
-		 <div class="col-md-3">
+		 <div class="col-md-3 ">
 		 	<?php if(dynamic_sidebar('footer-sidebar-1')) : else : endif; ?>
 		 </div>
+		
 		 <div class="col-md-3">
 		  <?php if(dynamic_sidebar('footer-sidebar-2')) : else : endif; ?>
 		</div>
