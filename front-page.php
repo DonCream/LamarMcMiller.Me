@@ -152,13 +152,17 @@ get_header();
 				<?php
 				    $args = array( 'numberposts' => '5' );
 				    $recent_posts = wp_get_recent_posts( $args );
+
 				    $i = 0;
 				    foreach($recent_posts as $recent) {
 
-				        echo '<div class="card mb-2 post-desc"><article class="post"><span class="tab-2"><?php the_date(); ?> by <?php the_author(); ?></span>
-	  					<h1 class="card-heading tab-2"> . $recent["post_title"] .</h1>
-	  					<p class="card-body"><?php the_content(); ?></p>
-	  					<a class="custom-btn btn btn-sm m-3" href="blogpost.html">Read More</a></article></div> ';
+						$excerpt = wp_trim_excerpt( $recent['post_content']);
+
+				        echo '<div class="card mb-2"><h4 class="card-heading pl-4 pt-2"><a  href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].  ' </a> </h4>
+								<img class="img-fluid">' . get_the_post_thumbnail($recent["ID"], 'thumbnail') . '
+						  <p class="card-body">' . wp_trim_excerpt($recent["post_content"]) . '</p>
+							<a class="m-2 pl-3" href="' . get_permalink($recent["ID"]) . '"> Read More...</a>
+						  </div> ';
 
 				    $i++;
 				    }

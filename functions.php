@@ -111,11 +111,13 @@ add_action( 'after_setup_theme', 'lm_content_width', 0 );
 
 function lm_scripts() {
 
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+
    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/dist/css/bootstrap.css');
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/fonts/font-awesome.min.css' );
 
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+
 
    wp_register_script('popper', '/src/js/popper.min.js'. false, '', true);
 
@@ -199,4 +201,7 @@ function change_logo_class($html)
 //  Remove Wordpress Admin bar
  show_admin_bar(false);
 
-// add icon class to font-awesome icons
+ function new_excerpt_more( $more ) {
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
