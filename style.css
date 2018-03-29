@@ -706,6 +706,10 @@ ul {
   background-color: #a47a51;
 }
 
+img.attachment-thumbnail {
+  padding: 2px;
+}
+
 nav {
   background-color: #24242B;
 }
@@ -920,10 +924,6 @@ span.slash {
   border-color: #2a97c6;
 }
 
-.box-6 .card > h1 {
-  font-family: box-2-header;
-}
-
 .box-6 #blog-link {
   color: #2a97c6;
 }
@@ -1078,10 +1078,6 @@ footer > .container-fluid {
 #work {
   text-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5), 0 20px 50px rgba(0, 0, 0, 0.6);
   letter-spacing: -2px;
-}
-
-.article {
-  background-color: #dbe8f1;
 }
 
 #recent-posts-5 {

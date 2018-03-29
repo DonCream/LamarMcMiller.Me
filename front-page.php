@@ -88,7 +88,7 @@ get_header();
 			<p class="m-3 p-3 text-center">Themes and projects Ive created around the web.</p>
 			<div class="row m-4">
 				<div class="col-md-4 mb-2">
-					<a href="http://placehold.it/300/f1b702/fff&text=image1" data-toggle="lightbox" data-gallery="img-gallery"><img class="img-fluid" src="http://placehold.it/600/f1b702/fff&text=image1"  alt="some more text">
+					<a href="http://localhost/wp-content/uploads/2018/03/webjelly.png" data-toggle="lightbox" data-gallery="img-gallery"><img class="img-fluid" src="http://localhost/wp-content/uploads/2018/03/webjelly.png">webjelly.net
 						</a>
 				</div>
 				<div class="col-md-4 mb-2">
@@ -160,7 +160,7 @@ get_header();
 
 				        echo '<div class="card mb-2"><h4 class="card-heading pl-4 pt-2"><a  href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].  ' </a> </h4>
 								<img class="img-fluid">' . get_the_post_thumbnail($recent["ID"], 'thumbnail') . '
-						  <p class="card-body">' . wp_trim_excerpt($recent["post_content"]) . '</p>
+						  <p class="card-body">' . $excerpt . '</p>
 							<a class="m-2 pl-3" href="' . get_permalink($recent["ID"]) . '"> Read More...</a>
 						  </div> ';
 

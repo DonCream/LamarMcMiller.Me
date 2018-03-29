@@ -92,7 +92,7 @@ gulp.task('imageMin', function(){
      progressive: true,
      interlaced: true
   })))
-     .pipe(gulp.dest('./images'))
+     .pipe(gulp.dest('/images'))
      .pipe(browserSync.stream());
   });
 
@@ -130,7 +130,7 @@ gulp.task('sass', function() {
    browserSync.init({
      files: ['./**/*.php'],
      proxy: 'http://localhost/'
-   });  
+   });
 
    gulp.watch(['./sass/**/*.scss'], ['sass']).on('change', reload);
    gulp.watch(['./src/js/*.js'], ['js']).on('change', reload);

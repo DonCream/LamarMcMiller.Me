@@ -127,7 +127,7 @@ ul {
   background-color: $brown; }
 
 img.attachment-thumbnail {
-   padding: 2px:
+   padding: 2px;
 }
 
 nav {
@@ -315,15 +315,9 @@ span.slash {
     .card {
     border-color: $dkblue;
   }
-    .card > h4 > a {
-    font-family: $box-heading;
-  }
    #blog-link {
     color: $dkblue;
   }
-  p.card-body {
-     padding: 0;
- }
 }
 
 .box-7 {
